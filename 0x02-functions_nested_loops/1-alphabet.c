@@ -1,21 +1,14 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
- * print_alphabet - entry point
- *
- * Description: Prints the alphabet with _putchar
- *
- * Return: void
- */
-
-
+ * print_alphabet - print alphabet
+*/
 void print_alphabet(void)
 {
-	char c;
+	char alpha;
 
-	for (c = 'a'; c <= 'z'; c++)
-	{
-		_putchar(c);
-	}
-	_putchar('\n');
+	for (alpha = 'a'; alpha <= 'z'; alpha++)
+
+	_putchar (alpha);
+	_putchar ('\n');
+
 }

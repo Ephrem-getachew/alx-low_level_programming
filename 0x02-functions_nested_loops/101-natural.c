@@ -1,29 +1,17 @@
 #include <stdio.h>
-
 /**
- * main - natural numbers multiples of 3 or 5 to 1024
- *
- * Return: always 0
- */
+  * main - computes and prints the sum of all the multiples of
+  * 3 or 5 below 1024.
+  * Return: Nothing.
+  */
 
 int main(void)
 {
-	int s, t, f, tm, fm;
+	int i, res;
 
-	s = 0;
-	for (t = 0; t <= (1024 / 3); t++)
-	{
-		tm = 3 * t;
-		s = s + tm;
-	}
-	for (f = 0; f <= (1024 / 5); f++)
-	{
-		if (!(f % 3 == 0))
-		{
-			fm = 5 * f;
-			s = s + fm;
-		}
-	}
-	printf("%i\n", s);
+	for (i = 0; i < 1024; i++)
+		if (i % 3 == 0 || i % 5 == 0)
+			res += i;
+	printf("%d\n", res);
 	return (0);
 }
