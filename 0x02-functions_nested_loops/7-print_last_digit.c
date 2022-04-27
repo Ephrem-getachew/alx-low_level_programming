@@ -1,15 +1,24 @@
-#include "main.h"
-/**
- *print_last_digit - prints the last digit of a number.
- *@pld: numbers
- *Return: ld and absolut value
-*/
-int print_last_digit(int pld)
-{
-	int ld = pld % 10;
+#include "holberton.h"
 
-	if (ld < 0)
-		ld = -ld;
-	_putchar (ld + '0');
-	return (ld);
+/**
+ * print_last_digit - prints last digit of number
+ * @n: number to print last digit of
+ *
+ * Return: the last digit as an int
+ */
+
+int print_last_digit(int n)
+{
+	int retval;
+
+	if (n < 0)
+	{
+		retval = (n % 10) * -1;
+	}
+	else
+	{
+		retval = n % 10;
+	}
+	_putchar(retval + '0');
+	return (retval);
 }

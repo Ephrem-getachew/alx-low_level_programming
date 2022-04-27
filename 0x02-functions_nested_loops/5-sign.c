@@ -1,25 +1,26 @@
-#include "main.h"
+#include "holberton.h"
 /**
- *print_sign - print signs
- *@n: is a variable
- *Return: 1 if n>0, 0 else if n=0, -1 else
-*/
+ * print_sign - checks if letter provided is in fact a letter
+ * @n: integer from which to check whether is positive, negative or zero
+ * Return: Void.
+ */
+
 int print_sign(int n)
 {
+
 	if (n > 0)
 	{
-		_putchar ('+');
+		_putchar('+');
 		return (1);
 	}
-	else if (n == 0)
+	else if (n < 0)
 	{
-		_putchar ('0');
-		return (0);
+		_putchar('-');
+		return (1);
 	}
 	else
 	{
-		_putchar ('-');
-		return (-1);
+		_putchar('0');
+		return (0);
 	}
-	return (0);
 }

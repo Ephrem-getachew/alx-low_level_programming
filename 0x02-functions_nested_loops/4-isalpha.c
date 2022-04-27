@@ -1,14 +1,23 @@
-#include "main.h"
+#include "holberton.h"
+
 /**
- * _isalpha - check if c is lower or uppercase
- * @c: letter
- * Return: 1 if c is lower 0 if not
-*/
+ * _isalpha - check the code for Holberton School students.
+ *
+ * @c: is c an integer argument
+ *
+ * Return: Always 0.
+ */
+
 int _isalpha(int c)
 {
 
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if (c >= 97 && c <= 122)
+	{
 		return (1);
-	else
-		return (0);
+	}
+	else if (c >= 65 && c <= 90)
+	{
+		return (1);
+	}
+	return (0);
 }

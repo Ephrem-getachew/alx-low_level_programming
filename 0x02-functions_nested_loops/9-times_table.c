@@ -1,24 +1,39 @@
-#include "main.h"
+#include "holberton.h"
 /**
- *times_table - table
-*/
+ * times_table - Print 9 times table
+ *
+ * Return: Void.
+ */
+
 void times_table(void)
 {
-	int p, m, r;
+	int x, y, multiplied_value;
 
-	for (p = 0; p <= 9; p++)
+	for (y = 0; y < 10; y++)
 	{
-		_putchar('0');
-		for (m = 1; m <= 9; m++)
+		for (x = 0; x < 10; x++)
 		{
-			_putchar(',');
-			_putchar(' ');
-			r = p * m;
-			if (r <= 9)
+			multiplied_value = x * y;
+			if (x == 0)
+			{
+				_putchar(multiplied_value + '0');
+			}
+			else if (multiplied_value >= 10)
+			{
 				_putchar(' ');
+				_putchar(multiplied_value / 10 + '0');
+				_putchar(multiplied_value % 10 + '0');
+			}
 			else
-				_putchar(r / 10 + '0');
-			_putchar(r % 10 + '0');
+			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(multiplied_value + '0');
+			}
+			if (x != 9)
+			{
+				_putchar(',');
+			}
 		}
 		_putchar('\n');
 	}
